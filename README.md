@@ -2,43 +2,42 @@
 
 # Innvent - Bootcamp
 
-## Instruções para execução do projeto
-### Linux:
-* <b>Editor</b> - O de sua preferência (vi, nano, emacs, sublime text 2...)
-* <b>Versionador</b> - Utilizaremos o GIT. Se já tem instalado e possui uma conta no GITHUB, ótimo. Se não, siga as instruções em <a>http://help.github.com/linux-set-up-git/</a> para instalar o git e crie sua conta no github.
-* <b>Banco de Dados</b> - SQLite3 ( Se não tiver instalado em seu linux, pode utilizar o gerenciador de pacotes de sua distribuição para instalá-lo - apt-get, aptitude, yum... São necessárias, também, as bibliotecas de desenvolvimento do SQLite3 - sqlite3-devel ou semelhante, dependendo da distribuição.)
+#Projeto desenvolvido por Rodolfo da Costa e Acaz Souza.
 
-### MAC-OS:
-* <b>Editor</b> - TextMate, MacVim, SublimeText 2 ou qualquer outro editor de sua preferência.
-* <b>Versionador</b> - Utilizaremos o GIT. Se já tem instalado e possui uma conta no GITHUB, ótimo. Se não, siga as instruções em <a>http://help.github.com/mac-set-up-git/</a> para instalar o git e crie sua conta no github.
-* <b>Banco de Dados</b> - SQLite3 (Se não tiver instalado, pode usar o brew para instalar pra você <a>https://github.com/mxcl/homebrew</a>.)
+Projeto 2D
 
-<i><b>PS: Sim, é de propósito! Não tem Windows na lista mesmo... Em geral o windows não é usado para desenvolver apps Ruby'n Rails.</b></i>
+As questões 1,3,4 foram implementadas
 
-### Já fiz os passos acima... O que faço agora?
-* <b>Instale o RVM</b> - Instruções em <a>http://beginrescueend.com/rvm/install/</a>
-* <b>Instale o ruby 1.9.3</b> - Use os seguintes comandos no prompt:
-	
-	> rvm install ruby-1.9.3 <br>
-	> rvm --default ruby-1.9.3
-* <b>Faça um "fork" do projeto para sua conta do GitHub</b>:
+Questao 1
+Utilizamos o scaffold para gerar o colaborador
+Modificamos o esquema para atender as requisições necessárias, inclusive a troca de responsavel por colaborador
 
-	> acesse a url do projeto em <a>https://github.com/innvent/bootcamp_innvent</a><br>
-	> clique em "fork" e siga as instruções
-* <b>Faça um clone do projeto "forkeado" para usa máquina e acesse a pasta</b>:
-	> git clone "URL SSH DO REPOSITÓRIO CRIADO EM SUA CONTA"<br>
-	> cd bootcamp_innvent
-* <b>Instale a gem BUNDLER </b>:
+Questao 2
+Tivemos um pouco de dificuldade para soluciona-la, ao adicionar um modal com o form que tinhamos, então visto o tempo
+a mesma foi deixada de lado.
 
-	> gem install bundler
-* <b>Instale as demais gems requeridas</b>:
+Questao 3
+Utilizamos um link para finalizar a tarefa e um controlador que atualiza a mesma no banco
+A exposicao das tarefas finalizadas foi feito por um teste simples para averiviguar se a mesma esta terminada e assim tachar a descricao e tornar 
+a opção finalizar como uma label simples
 
-	> bundle install
+Questão 4
+Criamos uma regra simples assim como foi feito para validar o texto com letra inicial maiuscula, para que o mesmo fosse
+valido segundo os criterios estabelicidos
 
-* <b>Criando e Preparando o Banco de dados</b>:
-	> rake db:create:all<br>
-	> rake db:migrate
 
-* <b>Neste pronto o projeto deverá estar pronto para ser executado</b>:
-	> rails s<br>
-	> acesse seu navegador e redirecione para a página <a>http://localhost:3000</a>
+Validação dos testes: Algumas das falhas encontradas pelo o teste foram corrigidas, algumas como o caso de validação da data inicial nao ser inferior 
+ao dia atual foi feita mas requer verificações
+
+Projeto 2do metrics
+
+Realizamos a tarefa em javascript e jquery
+Para alimentar as requisições realizadas pelo nosso projeto, dentro do projeto 2do foi criado rotas que retornam 
+todos os colaboradores, tarefas e projetos (cada uma em seu controlador especifico), e apos isto, são processados pelo 2do metrics
+
+Sobre o javascript, fizemos uma solução que envolve encapsulação com os métodos privados e expus apenas os métodos que resolve o problema pedido. Mas tivemos um
+problema em relação ao contexto que o Ajax pra retornar o Json criava, a espera pelos callbacks nos atrapalhou um pouco. Conseguimos resolver, fizemos o Exibir tempo total gasto em tarefas por projeto,  mas faltou tratarmos as datas com o javascript o que nos causou problemas.
+
+Colocamos o código dentro do próprio projeto TOdo = Assets/JavaScript/ToDoMetrics.js.
+
+#Obrigado

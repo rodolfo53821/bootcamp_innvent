@@ -3,6 +3,8 @@
 <%=f.hidden_field :projeto_id %>
 	Responsavel:
   <p>
+		
+		<%= f.label 'Responsavel' %>
 		<%= f.select("colaborador_id", options_for_select( Colaborador.all.map {|p| [ p.nome, p.id ] }))%>
 	</p>
 	Descricao:

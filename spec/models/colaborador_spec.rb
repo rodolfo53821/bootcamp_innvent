@@ -1,6 +1,5 @@
-#encoding: utf-8
 require 'spec_helper'
 
-describe 'Colaborador' do
-  pending "Criar definição!"
+describe Colaborador do
+  pending "add some examples to (or delete) #{__FILE__}"
 end

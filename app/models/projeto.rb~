@@ -12,7 +12,7 @@ class Projeto < ActiveRecord::Base
 
  	private
  	def data_atualizada
-     errors.add(:data_entrega,"deve ser superior a data de inicio") unless  data_inicio <= 		Time.now
+     errors.add(:data_entrega,"deve ser superior a data de inicio") unless  data_inicio <= 		data_entrega 
 	end
 
   private 

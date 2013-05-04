@@ -8,7 +8,7 @@ Todo::Application.routes.draw do
   resources :projetos do
 		collection do
 			get "listAll"
-			get "todo_metrics"
+			get "Todo_metrics"
 		end
     resources :tarefas, :except => [:show] do
 			post "finalizar"

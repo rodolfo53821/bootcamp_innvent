@@ -1,0 +1,30 @@
+<h2>Lista de Tarefas</h2>
+
+
+<div id="resultado">
+	<%= render :partial => 'lista_tarefa', :object => @tarefas %>
+</div>
+
+<%= link_to 'Nova Tarefa', new_projeto_tarefa_path(@projeto), :id => 'cria_nova_tarefa' %>
+
+
+
+
+
+ 
+<a href="#" id="cria_nova_tarefa" onclick="showUrlInDialog(); return false;">Nova Tarefa</a>
+
+<script type="text/javascript">
+
+
+
+function showUrlInDialog(url){
+  var tag = $("<div></div>"); //This tag will the hold the dialog content.
+ 	tag.html(<%=escape_javascript(render(:partial => 'form', :locals => {:tarefa => @tarefa}))%>).dialog('open');
+  
+}
+</script>
+
+
+
+

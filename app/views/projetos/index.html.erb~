@@ -15,7 +15,7 @@
 <% @projetos.each do |projeto| %>
   <tr>
 	<td><%=projeto.nome%></td>
-	<td><%=projeto.colaborador.nome%></td>
+	<td><%=projeto.colaborador_id%></td>
 	<td><%=projeto.data_entrega%></td>
     <td><%= link_to 'Altera', edit_projeto_path(projeto) %></td>
     <td><%= link_to 'Remove', projeto,

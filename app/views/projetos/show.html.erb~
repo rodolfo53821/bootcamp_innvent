@@ -2,7 +2,7 @@
 	<h2><%= @projeto.nome %></h2>
 	<dl>
 	  <dt><%= label_tag 'Responsavel:'%></dt>
-  	  <dd><%= @projeto.colaborador.nome %></dd>
+  	  <dd><%= @projeto.colaborador %></dd>
 	  <dt><%= label_tag 'Entrega prevista para:'%></dt>
 	  <dd><%= @projeto.data_entrega %></dd>
     </dl>	  

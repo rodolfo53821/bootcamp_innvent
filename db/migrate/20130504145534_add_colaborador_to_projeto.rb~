@@ -1,0 +1,6 @@
+class AddColaboradorToProjeto < ActiveRecord::Migration
+  def change
+    add_column :projetos, :colaborador_id, :integer
+
+  end
+end

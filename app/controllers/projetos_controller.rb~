@@ -68,7 +68,7 @@ class ProjetosController < ApplicationController
     end
   end
 
-	def todo_metrics
+	def metrics
     
   end
 

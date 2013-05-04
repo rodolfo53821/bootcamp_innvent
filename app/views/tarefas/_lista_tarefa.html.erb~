@@ -22,13 +22,9 @@
 			<td><%= link_to 'Alterar', edit_projeto_tarefa_path(tarefa.projeto, tarefa) %></td>
 			
 			<td>
-        <% if tarefa.data_finalizacao != nil %>
-						Finalizar
-				<% else%>
-					<%= link_to 'Finalizar', projeto_tarefa_finalizar_path(tarefa.projeto,tarefa),
-							:method => :post
-					 %>
-				<% end%>
+				<%= link_to 'Finalizar', projeto_tarefa_finalizar_path(tarefa.projeto,tarefa),
+				  	:method => :post
+				 %>
 			</td>
 
 			<td>
